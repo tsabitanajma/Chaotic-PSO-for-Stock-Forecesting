@@ -1,4 +1,28 @@
 # ============================================
+# INSTALL MISSING PACKAGES (Jika diperlukan)
+# ============================================
+try:
+    import plotly.graph_objects as go
+except ImportError:
+    import subprocess
+    import sys
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "plotly"])
+    import plotly.graph_objects as go
+
+# ============================================
+# IMPORTS
+# ============================================
+import pandas as pd
+import numpy as np
+import pickle
+import warnings
+warnings.filterwarnings('ignore')
+
+import streamlit as st
+
+# ... (lanjutan kode Anda)
+
+# ============================================
 # IMPORTS
 # ============================================
 import pandas as pd
