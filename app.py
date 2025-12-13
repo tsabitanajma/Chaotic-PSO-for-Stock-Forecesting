@@ -2,21 +2,32 @@
 # ============================================
 # IMPORTS
 # ============================================
+# ============================================
+# IMPORTS (SEMUA DI SINI SAJA)
+# ============================================
+import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
 import warnings
-import plotly.graph_objects as go
-import streamlit as st
 
-warnings.filterwarnings('ignore')
-
+# SET PAGE CONFIG HARUS DULUAN SETELAH IMPORT STREAMLIT
 st.set_page_config(
     page_title="Prediksi Saham BRIS",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# SEKARANG IMPORT LAINNYA
+try:
+    import plotly.graph_objects as go
+    import plotly.express as px
+except ImportError as e:
+    st.error(f"Error importing plotly: {e}")
+    st.stop()
+
+warnings.filterwarnings('ignore')
 
 # ============================================
 # CUSTOM CSS - BSI THEME
