@@ -651,35 +651,33 @@ if predict_btn:
 import streamlit.components.v1 as components
 
 components.html("""
-<div class="footer-container">
-    <div class="footer-grid">
-        <div class="footer-item">
-            <div class="footer-label">Model</div>
-            <div class="footer-value">XGBoost-CPSO</div>
-        </div>
-        <div class="footer-item">
-            <div class="footer-label">Symbol</div>
-            <div class="footer-value">BRIS.JK</div>
-        </div>
-        <div class="footer-item">
-            <div class="footer-label">Type</div>
-            <div class="footer-value">Regression</div>
-        </div>
-        <div class="footer-item">
-            <div class="footer-label">Purpose</div>
-            <div class="footer-value">Educational</div>
-        </div>
-    </div>
+<style>
+.footer {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #6b7280;
+    font-size: 13px;
+    text-align: center;
+    padding: 16px 8px;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 32px;
+}
 
-    <div class="separator-line"></div>
+.footer strong {
+    color: #374151;
+}
 
-    <p style="font-weight:600;">© 2024 BSI Stock Predictor</p>
-    <p>XGBoost + Chaotic PSO | Untuk tujuan edukasional</p>
-    <p style="font-size:12px;">
-        Disclaimer: Hasil prediksi tidak menjamin keakuratan 100%.
-    </p>
+.footer small {
+    font-size: 12px;
+}
+</style>
+
+<div class="footer">
+    <strong>BSI Stock Predictor</strong> — XGBoost + Chaotic PSO<br>
+    <small>Educational Purpose • © 2024</small>
 </div>
-""", height=260)
+""", height=120)
+
 
 # ============================================
 # REFRESH BUTTON
