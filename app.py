@@ -455,7 +455,7 @@ with st.container():
         open_price = st.number_input(
             "Harga Pembukaan (IDR)",
             min_value=0.0,
-            value=1000.0,
+            value=0.0,
             step=10.0,
             label_visibility="collapsed",
             key="open_manual"
@@ -467,7 +467,7 @@ with st.container():
         high_price = st.number_input(
             "Harga Tertinggi (IDR)",
             min_value=0.0,
-            value=1050.0,
+            value=0.0,
             step=10.0,
             label_visibility="collapsed",
             key="high_manual"
@@ -479,7 +479,7 @@ with st.container():
         low_price = st.number_input(
             "Harga Terendah (IDR)",
             min_value=0.0,
-            value=980.0,
+            value=0.0,
             step=10.0,
             label_visibility="collapsed",
             key="low_manual"
@@ -491,7 +491,7 @@ with st.container():
         close_price = st.number_input(
             "Harga Penutupan (IDR)",
             min_value=0.0,
-            value=1025.0,
+            value=0.0,
             step=10.0,
             label_visibility="collapsed",
             key="close_manual"
@@ -503,7 +503,7 @@ with st.container():
         volume = st.number_input(
             "Volume (lot)",
             min_value=0,
-            value=1500000,
+            value=0,
             step=10000,
             label_visibility="collapsed",
             key="volume_manual"
