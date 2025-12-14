@@ -2,9 +2,7 @@
 # ============================================
 # IMPORTS
 # ============================================
-# ============================================
-# IMPORTS (SEMUA DI SINI SAJA)
-# ============================================
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -296,7 +294,6 @@ with st.sidebar:
     st.markdown("**⚙️ Model Details**")
     st.markdown("""
     - **Algorithm**: XGBoost-CPSO
-    - **Accuracy**: ~95.2% (MAPE)
     - **Features**: 5 parameters
     - **Training**: 2021-2025 data
     """)
