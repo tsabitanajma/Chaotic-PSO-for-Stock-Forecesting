@@ -182,6 +182,39 @@ st.markdown("""
         margin-bottom: 8px;
         display: block;
     }
+
+    /* Tambahkan di CSS yang sudah ada */
+    .st-expander {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .st-expander > div {
+        padding: 15px !important;
+    }
+    
+    /* Fix untuk metric cards spacing */
+    [data-testid="stMetric"] {
+        margin: 15px 0 !important;
+    }
+    
+    /* Fix untuk text dalam expander */
+    .st-emotion-cache-1fvpi8z p {
+        margin-bottom: 8px !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Fix untuk list dalam markdown */
+    ul {
+        margin-top: 8px !important;
+        margin-bottom: 8px !important;
+        padding-left: 20px !important;
+    }
+    
+    li {
+        margin-bottom: 5px !important;
+    }
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -530,8 +563,7 @@ if predict_btn:
                     - **Perubahan**: Rp {change:+,.0f}
                     - **% Perubahan**: {pct_change:+.2f}%
                     - **Model**: XGBoost-CPSO
-                    - **Akurasi**: ~95.2%
-                    """)
+                    """)  # Hapus Accuracy dari sini
 
 # ============================================
 # FOOTER
@@ -545,28 +577,18 @@ st.markdown("""
             <div>XGBoost-Chaotic PSO</div>
         </div>
         <div style='text-align: center;'>
-            <div style='font-weight: 700; color: #00A651;'>Accuracy</div>
-            <div>95.2% (MAPE)</div>
-        </div>
-        <div style='text-align: center;'>
             <div style='font-weight: 700; color: #00A651;'>Symbol</div>
             <div>BRIS.JK</div>
         </div>
     </div>
     
-    <div style='
-        background: linear-gradient(90deg, #00A651, #F37021);
-        height: 3px;
-        width: 100px;
-        margin: 10px auto;
-        border-radius: 3px;
-    '></div>
+    <hr style='border: none; height: 3px; background: linear-gradient(90deg, #00A651, #F37021); width: 100px; margin: 10px auto; border-radius: 3px;'>
     
-    <p style='margin-top: 15px;'>
+    <p style='margin-top: 15px; margin-bottom: 10px;'>
         © 2024 BSI Stock Predictor | XGBoost + Chaotic PSO | Untuk tujuan edukasional
     </p>
     
-    <div style='font-size: 12px; color: #888; margin-top: 10px;'>
+    <div style='font-size: 12px; color: #666; margin-top: 5px;'>
         Disclaimer: Hasil prediksi tidak menjamin keakuratan 100%.
     </div>
 </div>
