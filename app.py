@@ -629,45 +629,44 @@ if predict_btn:
                     """)
 
 # ============================================
-# FOOTER - VERSI FIXED
+# FOOTER 
 # ============================================
 st.markdown("---")
 
-# Footer Container
+# Horizontal line dengan warna BSI
 st.markdown("""
-<div class="footer-container">
-    <div class="footer-grid">
-        <div class="footer-item">
-            <div class="footer-label">Model</div>
-            <div class="footer-value">XGBoost-CPSO</div>
-        </div>
-        <div class="footer-item">
-            <div class="footer-label">Symbol</div>
-            <div class="footer-value">BRIS.JK</div>
-        </div>
-        <div class="footer-item">
-            <div class="footer-label">Type</div>
-            <div class="footer-value">Regression</div>
-        </div>
-        <div class="footer-item">
-            <div class="footer-label">Purpose</div>
-            <div class="footer-value">Educational</div>
-        </div>
-    </div>
-    
-    <div class="separator-line"></div>
-    
-    <div style="margin: 15px 0;">
-        <p style="font-weight: 600; color: #1A3A2A; margin-bottom: 5px;">
-            © 2024 BSI Stock Predictor
-        </p>
-        <p style="color: #666; margin-bottom: 10px;">
-            XGBoost + Chaotic PSO | Untuk tujuan edukasional
-        </p>
-        <p style="font-size: 12px; color: #888;">
-            Disclaimer: Hasil prediksi tidak menjamin keakuratan 100%.
-        </p>
-    </div>
+<div style="height: 3px; background: linear-gradient(90deg, #00A651, #F37021); 
+            width: 150px; margin: 0 auto 20px auto; border-radius: 3px;"></div>
+""", unsafe_allow_html=True)
+
+# Info baris pertama
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown("**Model:** XGBoost-CPSO")
+with col2:
+    st.markdown("**Symbol:** BRIS.JK")
+
+# Info baris kedua  
+col3, col4 = st.columns(2)
+with col3:
+    st.markdown("**Type:** Regression Model")
+with col4:
+    st.markdown("**Purpose:** Educational")
+
+# Copyright
+st.markdown("""
+<div style="text-align: center; margin-top: 20px; padding: 15px; 
+            background: linear-gradient(90deg, #f8fdf9, white); 
+            border-radius: 10px;">
+    <p style="color: #1A3A2A; font-weight: 600;">
+        © 2025 BSI Stock Predictor
+    </p>
+    <p style="color: #666; font-size: 14px;">
+        XGBoost + Chaotic PSO | Untuk tujuan edukasional
+    </p>
+    <p style="color: #888; font-size: 12px; margin-top: 10px;">
+        Disclaimer: Hasil prediksi tidak menjamin keakuratan 100%.
+    </p>
 </div>
 """, unsafe_allow_html=True)
 
